@@ -23,6 +23,7 @@ return new class extends Migration
             
             $table->unsignedBigInteger('publisher_id');
             $table->foreign('publisher_id')->references('id')->on('publishers')->onDelete('cascade');
+            $table->integer('published_year')->nullable();
 
             $table->timestamps();
         });
